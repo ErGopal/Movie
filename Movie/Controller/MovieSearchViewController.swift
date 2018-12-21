@@ -57,7 +57,7 @@ class MovieSearchViewController: UIViewController {
         viewModel.data
             .drive(tblMovieList.rx.items(cellIdentifier: "MovieListCell")) { _, repository, cell in
                 cell.textLabel?.text = repository.searchKeyword
-                cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
+                cell.textLabel?.font = UIFont.systemFont(ofSize: round(CScreenWidth * (13 / 375)))
                 cell.textLabel?.textColor = CRGB(r: 198, g: 198, b: 198)
             }
             .disposed(by: disposeBag)

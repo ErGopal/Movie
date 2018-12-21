@@ -80,10 +80,10 @@ class MovieSearchViewController: UIViewController {
     }
     
     func moveToSearchScreen(searchString:String) {
-//        if let movieListVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieListViewController") as? MovieListViewController {
-//            movieListVC.keyword = searchString
-//            self.navigationController?.pushViewController(movieListVC, animated: true)
-//        }
+        if let movieListVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieListViewController") as? MovieListViewController {
+            movieListVC.keyword = searchString
+            self.navigationController?.pushViewController(movieListVC, animated: true)
+        }
     }
 }
 
